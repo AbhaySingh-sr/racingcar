@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sky{
+    height: 100vh;
+    position:absolute;
+    width: 100%;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.trees{
+    top:-144px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("trees.png");
+    background-size: cover;
+    position: absolute;
+}
+
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url("track.png");
+    position: absolute;
+    top: 70vh;
+    background-repeat: repeat-x;
+    animation: carMove linear 6s infinite;
+}
+.car{
+    height: 100px;
+    width: 380px;
+    background-image: url(lamborgini.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 444px;
+    bottom: 30vh;
+    animation: shake linear .3s infinite;
+}
+.wheel1 img{
+     width: 75px;
+     position: relative;
+     top: 38px;
+     left: 23px;
+     animation: wheelRotation linear .11s infinite;
+}
+.wheel2 img{
+     width: 60px;
+     position: relative;
+     top: -34px;
+     left: 269px;
+     animation: wheelRotation linear .11s infinite;
+}
+@keyframes wheelRotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes carMove{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes shake{
+      0%{
+        transform: translateY(-5px);
+    }
+      50%{
+        transform: translateX(5px);
+    }
+      100%{
+        transform: translateX(-5px);
+    }
+}
+body{
+    overflow: hidden;
+}
+@keyframes shakeBody{
+      0%{
+        transform: translateY(-5px);
+    }
+      50%{
+        transform: translateX(5px);
+    }
+      100%{
+        transform: translateX(-5px);
+    }
+}
